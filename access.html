@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <title>Holberton School</title>
+    <script src='./main.js'></script>
+    <script src='./localStorage.js'></script>
+    <link rel = "stylesheet"
+    type = "text/css"
+    href = "./accessStyle.css" />
+</head>
+<body onload='configureUserPage()'>
+    <div id='login'>
+        <div id='navbar'>
+            <table id='navbarTable'>
+                <tr id='navbarRow'>
+                    <td class='navbarCol'>
+                        <a href='./home.html'><input class='buttons' type='button' value='Home'></a>
+                    </td>
+                    <td class='navbarCol'>
+                        <a href='./about.html'><input class='buttons' type='button' value='About'></a>
+                    </td>
+                </tr>
+                
+            </table>
+        </div>
+        <div id='container'>
+            <p id='welcome'>Welcome To Our Website:</p>
+            <p id='intro'>If you already have your account, just Log In Or press Sign Up!</p>
+            <form>
+                <input class='loginInputs' oninput='clearError()' id='usernameText' type='text' placeholder='username'><br>
+                <input class='loginInputs' oninput='clearError()' id='passwordText' type='password' placeholder='password'><br>
+                <input class='loginInputs' id='errorLabel' type='label' PlaceHolder='' disabled='true'><br>
+                <input id='logIn' type='button' value='Log In' onclick='userDetection()'><br>
+                <input id='signUp' type='button' value='Sign Up' onclick='signUpDirect()'><br>
+            </form>
+        </div>
+    </div>
+    
+    <div id='account'>
+        <table id='accountManager'>
+            <tr>
+                <td id='studentsList' rowspan='2'>
+                    <h2>Students:</h2>
+                    <div id='students'>
+                    </div>
+                </td>
+                <td id='header' colspan='2'>
+                    <p id='welcomeUser'></p>
+                    <button onclick='logout()' id='logout-button'>Logout</button>
+                </td>
+            </tr>
+            <tr>
+                <td id='details' colspan='2'>
+                    
+                </td>
+            </tr>     
+        </table>
+    </div>
+    
+    
+</body>
+</html>
